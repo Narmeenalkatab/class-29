@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Details about {{ DjangoX.name }}</h2>
+<h2>purcheser: {{ DjangoX.purcheser.first_name }} {{DjangoX.purcheser.last_name }}</h2>
+<p>{{ DjangoX.desc }}</p>
+<a href="{% url 'DjangoX_update' DjangoX.pk %}">+ Update DjangoX</a>
+<a href="{% url 'DjangoX_delete' DjangoX.pk %}">+ DeleteDjangoX</a>
+
+{% endblock content %}

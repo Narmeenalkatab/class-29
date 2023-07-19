@@ -1,0 +1,16 @@
+{% extends '_base.html'%}
+
+
+{% block content %}
+
+<a href="{% url 'DjangoX_create' %}">+ New DjangoX</a>
+<ul>
+  {% for DjangoX in object_list %}
+  <li>
+    <a href="{% url 'DjangoX_detail'DjangoX.pk %}">{{ DjangoX.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock content %}
